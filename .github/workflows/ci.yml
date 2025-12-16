@@ -1,0 +1,19 @@
+name: Day 8 CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: action/checkout@v4
+
+      - name: Run CI test
+        run: |
+          echo "CI is running"
+          echo "Hello from GitHub Actions"
