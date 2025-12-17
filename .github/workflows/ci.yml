@@ -10,13 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run CI test
-        run: |
-          echo "CI is running"
-          echo "Hello from GitHub Actions"
+      - name: Show repository files
+        run: ls -la
+          
 
      - name: Validate enviroment
        run: |
