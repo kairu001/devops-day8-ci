@@ -1,4 +1,4 @@
-name: Day 9 Improved CI Pipeline
+name: Day 11 Real CI with Docker Build
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  docker-ci:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,12 +16,6 @@ jobs:
       - name: Show repository files
         run: ls -la
 
-      - name: Validate enviroment
-        run: |
-         echo "Running on:"
-         uname -a
-
-      - name: Run basic checks
-        run: |
-         echo "CI checks passed"
+      - name: Build Docker image (no cache)
+        run: docker build --no-cache -t day11-image .
 
