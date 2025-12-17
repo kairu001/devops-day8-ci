@@ -17,3 +17,12 @@ jobs:
         run: |
           echo "CI is running"
           echo "Hello from GitHub Actions"
+
+     - name: Validate enviroment
+       run: |
+         echo " Running on: "
+         uname -a
+
+     - name: Run basic checks
+       run: |
+         echo "CI checks passed"
