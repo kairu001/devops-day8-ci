@@ -1,4 +1,4 @@
-name: Day 8 CI Pipeline
+name: Day 9 Improved CI Pipeline
 
 on:
   push:
@@ -15,11 +15,11 @@ jobs:
 
       - name: Show repository files
         run: ls -la
-          
+
 
      - name: Validate enviroment
        run: |
-         echo " Running on: "
+         echo "Running on:"
          uname -a
 
      - name: Run basic checks
